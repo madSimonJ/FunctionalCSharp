@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Functional-CSharp", "Functional-CSharp\Functional-CSharp.csproj", "{90172D1F-21AD-4ED5-8C6D-785BB897D107}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode", "AdventOfCode\AdventOfCode.csproj", "{67B95F61-EE62-4D18-B47C-F8E44474D597}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90172D1F-21AD-4ED5-8C6D-785BB897D107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90172D1F-21AD-4ED5-8C6D-785BB897D107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90172D1F-21AD-4ED5-8C6D-785BB897D107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90172D1F-21AD-4ED5-8C6D-785BB897D107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B95F61-EE62-4D18-B47C-F8E44474D597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B95F61-EE62-4D18-B47C-F8E44474D597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B95F61-EE62-4D18-B47C-F8E44474D597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B95F61-EE62-4D18-B47C-F8E44474D597}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF22AF55-1D5A-46BA-8921-50F0879BD234}
+	EndGlobalSection
+EndGlobal
