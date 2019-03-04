@@ -1,4 +1,4 @@
-# FunctionalCSharp
+# Functional Programming in C#
 
 This repository consists of the source material for my talk, Functional Programming in C#, which I have been presenting at various user groups and Conferences in the UK, US and India.
 
