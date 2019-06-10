@@ -9,19 +9,11 @@ namespace AdventOfCode
 {
     public static class FrequencyCalculator
     {
-        private static readonly IDictionary<char, Func<int, Func<int, int>>> Operations = new Dictionary<char, Func<int, Func<int, int>>>()
+        private static readonly IDictionary<char, Func<int, Func<int, int>>> Operations = new Dictionary<char, Func<int, Func<int, int>>>
         {
             {'+', x => y => x + y },
             {'-', x => y => y - x }
         };
-
-        private static int AggregateFunc(IEnumerator<Func<int, int>> e, int agg = 0) =>
-            e.MoveNext()
-                ? AggregateFunc(e, e.Current(agg))
-                : agg;
-
-        private static int AggregateFunc(this IEnumerable<Func<int, int>> array) =>
-            AggregateFunc(array.GetEnumerator());
 
         private static (char opChar, int opVal) GetOperationValues(string x) =>
             (x.First(), int.Parse(new string(x.Skip(1).ToArray())));
