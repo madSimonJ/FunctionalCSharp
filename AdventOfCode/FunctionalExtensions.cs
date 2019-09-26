@@ -39,7 +39,29 @@ namespace AdventOfCode
             predicate(@this)
                 ? updateF(@this).WhileDo(predicate, updateF)
                 : @this;
-    }
+
+        public static T GetNext<T>(this IEnumerator<T> @this) =>
+            @this.MoveNext()
+                ? @this.Current
+                : default(T);
+
+        public static IEnumerable<T> Repeat<T>(this Func<T> @this, int times) =>
+            Enumerable.Repeat(@this, times)
+                .Select(x => x());
+
+        public static IEnumerable<TOutput> Repeat<TInput, TOutput>(this TInput @this, Func<TInput, TOutput> f, int times) =>
+            Enumerable.Repeat(@this, times)
+            .Select(x => f(x));
+
+        public static T IfThen<T>(this T @this, Func<T, bool> predicate, Func<T, T> f) =>
+            predicate(@this)
+                ? f(@this)
+                : @this;
+
+        public static IEnumerable<T> GetAtPositions<T>(this IEnumerable<T> @this, IEnumerable<int> positions) =>
+            @this.Where((_, i) => positions.Contains(i));
+
+   }
 
     public static class F
     {
