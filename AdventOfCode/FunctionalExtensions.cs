@@ -61,6 +61,20 @@ namespace AdventOfCode
         public static IEnumerable<T> GetAtPositions<T>(this IEnumerable<T> @this, IEnumerable<int> positions) =>
             @this.Where((_, i) => positions.Contains(i));
 
+        public static IEnumerable<T> AsArray<T>(this T @this) =>
+            new[] { @this };
+
+        public static IEnumerable<T> InsertAtPosition<T>(this IEnumerable<T> @this, int pos, T item) =>
+            @this.Take(pos)
+            .Append(item)
+            .Concat(@this.Skip(pos));
+
+        public static TOutput Match<TInput, TOutput>(this TInput @this, params (Func<TInput, bool> cond, Func<TInput, TOutput> trans)[] f) =>
+            f.First(x => x.cond(@this)).trans(@this);
+
+        public static bool IsDivisibleBy(this int @this, int divisor) =>
+            @this % divisor == 0;
+
    }
 
     public static class F
